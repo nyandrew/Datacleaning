@@ -1,0 +1,3 @@
+README
+========================================================
+This script transforms all the data sets into one tidy dataset. It merges all the file into one data set which include the subject participated in the test and activities they did. Then it excludes those variables which are not mean or standard deivation of the raw data. Lastly, base on every subject and every activities, it take the means of the data set. There are 30 subjects in the test, and each of them has 6 activites. Hence there are 180 records. For each record, there are means of those mean and standard deviation data measured by the sensor, which are 66 of them.

@@ -1,0 +1,12 @@
+Code book for data clean in UCI HAR Dataset
+========================================================
+
+This is a code book for the tidy data set which is processed from the Raw data set "UCI HAR Dataset".
+There are 68 variables and 180 records in the tidy data set which are extracted from the raw data set.
+This data set includes every subject and every motion's mean measurements from two sensors.
+According to the requirements, I did the following changes on the data set.
+1.Combine the subject ID and activities ID into the data set for both train set and test set.(activites is in the Y_train.txt/Y_test.txt, subject ID is in the subject_train.txt/subject_test.txt, the data sets is X_train.txt/X_test.txt)
+2.Combine train set and test set and read into the file "feature.txt" to give these data sets for variable name.
+3.Give the variables of activity and subject a name, "Motion" and "SubjectID"
+4.Extract all the variables with mean and standard deviation data. Pay attention, this data set exclude the variable with name "meanFreq" because I think they are not the mean or std of the raw data. So there are 66 variables in the dataset "data2".
+5.Build a dataframe with beginning two variables"SubjectID" and "Motion", which specifiys every subject's every move. There are 180 rows in this data frame.(30 subjects and 6 motions.) And take the means for every combinantion of motion and subject in data2,put them into the data frame. So this data frame is the last result,"tidy data.txt"
